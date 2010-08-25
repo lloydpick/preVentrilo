@@ -48,6 +48,7 @@ BEGIN
         MENUITEM "Pause foobar2000",            ID_TRAY_FOOBAR2000
         MENUITEM "Pause iTunes",                ID_TRAY_ITUNES
         MENUITEM "Pause Rhapsody",              ID_TRAY_RHAPSODY
+		MENUITEM "Pause Spotify",               ID_TRAY_SPOTIFY
         POPUP "Winamp"
         BEGIN
             MENUITEM "Pause",                       ID_WINAMP_PAUSE

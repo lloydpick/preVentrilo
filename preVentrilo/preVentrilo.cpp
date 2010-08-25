@@ -288,6 +288,11 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             settings.mediaPlayer = MEDIA_PLAYER_RHAPSODY;
 			OnMediaPlayer();
 			break;
+		case ID_TRAY_SPOTIFY:
+            settings.bAdjustVolume = false;
+            settings.mediaPlayer = MEDIA_PLAYER_SPOTIFY;
+			OnMediaPlayer();
+			break;
 		case IDM_ABOUT:
 			// DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 			break;
@@ -530,6 +535,11 @@ void ShowMenu(HWND hWnd)
 		CheckMenuItem(hMenu, ID_TRAY_RHAPSODY, MF_CHECKED);
 	else
 		CheckMenuItem(hMenu, ID_TRAY_RHAPSODY, MF_UNCHECKED);
+
+	if(settings.mediaPlayer == MEDIA_PLAYER_SPOTIFY)
+		CheckMenuItem(hMenu, ID_TRAY_SPOTIFY, MF_CHECKED);
+	else
+		CheckMenuItem(hMenu, ID_TRAY_SPOTIFY, MF_UNCHECKED);
 
 	GetCursorPos(&mouse);
 	SetForegroundWindow(hWnd); // so that when you click off the menu it disappears

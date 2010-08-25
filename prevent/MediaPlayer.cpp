@@ -7,6 +7,7 @@
 #include "WMP.h"
 #include "iTunes.h"
 #include "Rhapsody.h"
+#include "Spotify.h"
 
 CMediaPlayer::CMediaPlayer(void)
 : m_pMediaPlayer(NULL)
@@ -119,6 +120,11 @@ void CMediaPlayer::SetType(int nType)
         case MEDIA_PLAYER_RHAPSODY:
         {
             m_pMediaPlayer = new CRhapsody();
+            break;
+        }
+        case MEDIA_PLAYER_SPOTIFY:
+        {
+            m_pMediaPlayer = new CSpotify();
             break;
         }
     }
