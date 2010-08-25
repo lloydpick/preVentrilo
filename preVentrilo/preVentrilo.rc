@@ -1,0 +1,169 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_PREVENTRILO         ICON                    "preVentrilo.ico"
+IDI_SMALL               ICON                    "small.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_PREVENTRILO MENU 
+BEGIN
+    POPUP "Tray"
+    BEGIN
+        MENUITEM "When I speak...",             ID_TRAY_PAUSEIFISPEAK
+        MENUITEM "When others speak...",        ID_TRAY_PAUSEIFOTHERSSPEAK
+        MENUITEM SEPARATOR
+        MENUITEM "Pause foobar2000",            ID_TRAY_FOOBAR2000
+        MENUITEM "Pause iTunes",                ID_TRAY_ITUNES
+        MENUITEM "Pause Rhapsody",              ID_TRAY_RHAPSODY
+        POPUP "Winamp"
+        BEGIN
+            MENUITEM "Pause",                       ID_WINAMP_PAUSE
+            MENUITEM "0% Volume",                   ID_WINAMP_0
+            MENUITEM "5% Volume",                   ID_WINAMP_5
+            MENUITEM "10% Volume",                  ID_WINAMP_10
+            MENUITEM "20% Volume",                  ID_WINAMP_20
+            MENUITEM "30% Volume",                  ID_WINAMP_30
+            MENUITEM "40% Volume",                  ID_WINAMP_40
+            MENUITEM "50% Volume",                  ID_WINAMP_50
+        END
+        MENUITEM "Pause Windows Media Player",  ID_TRAY_WINDOWSMEDIAPLAYER
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_PREVENTRILO ACCELERATORS 
+BEGIN
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 230, 60
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Sans Serif", 400, 0, 0x0
+BEGIN
+    ICON            IDI_PREVENTRILO,IDC_MYICON,26,4,20,20
+    CTEXT           "preVentrilo",IDC_STATIC,58,11,115,8,SS_NOPREFIX
+    CTEXT           "Pauses your media player while you and/or others speak on Ventrilo.",IDC_STATIC,7,25,216,8
+    DEFPUSHBUTTON   "OK",IDOK,93,40,43,13,WS_GROUP
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        VERTGUIDE, 13
+        VERTGUIDE, 115
+        VERTGUIDE, 217
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "preVentrilo"
+    IDC_PREVENTRILO         "PREVENTRILO"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
