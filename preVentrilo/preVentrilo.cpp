@@ -293,6 +293,29 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
             settings.mediaPlayer = MEDIA_PLAYER_SPOTIFY;
 			OnMediaPlayer();
 			break;
+		case ID_MEDIA_PLAYER_CLASSIC_PAUSE:
+			settings.bAdjustVolume = false;
+            settings.mediaPlayer = MEDIA_PLAYER_MEDIA_PLAYER_CLASSIC;
+			OnMediaPlayer();
+			break;
+		case ID_MEDIA_PLAYER_CLASSIC_LOW:
+			settings.bAdjustVolume = true;
+			settings.nAdjustedVolume = 15;
+            settings.mediaPlayer = MEDIA_PLAYER_MEDIA_PLAYER_CLASSIC;
+			OnMediaPlayer();
+			break;
+		case ID_VLC_PAUSE:
+			settings.bAdjustVolume = false;
+            settings.mediaPlayer = MEDIA_PLAYER_VLC;
+			OnMediaPlayer();
+			break;
+		case ID_VLC_LOW:
+			settings.bAdjustVolume = true;
+			settings.nAdjustedVolume = 15;
+            settings.mediaPlayer = MEDIA_PLAYER_VLC;
+			OnMediaPlayer();
+			break;
+
 		case IDM_ABOUT:
 			// DialogBox(hInst, MAKEINTRESOURCE(IDD_ABOUTBOX), hWnd, About);
 			break;
@@ -540,6 +563,27 @@ void ShowMenu(HWND hWnd)
 		CheckMenuItem(hMenu, ID_TRAY_SPOTIFY, MF_CHECKED);
 	else
 		CheckMenuItem(hMenu, ID_TRAY_SPOTIFY, MF_UNCHECKED);
+
+
+	if(settings.mediaPlayer == MEDIA_PLAYER_MEDIA_PLAYER_CLASSIC && !settings.bAdjustVolume)
+		CheckMenuItem(hMenu, ID_MEDIA_PLAYER_CLASSIC_PAUSE, MF_CHECKED);
+	else
+		CheckMenuItem(hMenu, ID_MEDIA_PLAYER_CLASSIC_PAUSE, MF_UNCHECKED);
+
+	if(settings.mediaPlayer == MEDIA_PLAYER_MEDIA_PLAYER_CLASSIC && settings.bAdjustVolume && settings.nAdjustedVolume == 15)
+		CheckMenuItem(hMenu, ID_MEDIA_PLAYER_CLASSIC_LOW, MF_CHECKED);
+	else
+		CheckMenuItem(hMenu, ID_MEDIA_PLAYER_CLASSIC_LOW, MF_UNCHECKED);
+
+	if(settings.mediaPlayer == MEDIA_PLAYER_VLC && !settings.bAdjustVolume)
+		CheckMenuItem(hMenu, ID_VLC_PAUSE, MF_CHECKED);
+	else
+		CheckMenuItem(hMenu, ID_VLC_PAUSE, MF_UNCHECKED);
+
+	if(settings.mediaPlayer == MEDIA_PLAYER_VLC && settings.bAdjustVolume && settings.nAdjustedVolume == 15)
+		CheckMenuItem(hMenu, ID_VLC_LOW, MF_CHECKED);
+	else
+		CheckMenuItem(hMenu, ID_VLC_LOW, MF_UNCHECKED);
 
 	GetCursorPos(&mouse);
 	SetForegroundWindow(hWnd); // so that when you click off the menu it disappears

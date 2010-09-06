@@ -29,6 +29,10 @@
 #define ID_WINAMP_60                    32785
 #define ID_WINAMP_0                     32786
 #define ID_TRAY_SPOTIFY                 32787
+#define ID_MEDIA_PLAYER_CLASSIC_PAUSE   32788
+#define ID_MEDIA_PLAYER_CLASSIC_LOW     32789
+#define ID_VLC_PAUSE					32790
+#define ID_VLC_LOW					    32791
 #define IDC_STATIC                      -1
 
 // Next default values for new objects
@@ -37,7 +41,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NO_MFC                     1
 #define _APS_NEXT_RESOURCE_VALUE        129
-#define _APS_NEXT_COMMAND_VALUE         32787
+#define _APS_NEXT_COMMAND_VALUE         327892
 #define _APS_NEXT_CONTROL_VALUE         1000
 #define _APS_NEXT_SYMED_VALUE           110
 #endif

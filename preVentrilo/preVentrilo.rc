@@ -48,7 +48,17 @@ BEGIN
         MENUITEM "Pause foobar2000",            ID_TRAY_FOOBAR2000
         MENUITEM "Pause iTunes",                ID_TRAY_ITUNES
         MENUITEM "Pause Rhapsody",              ID_TRAY_RHAPSODY
-		MENUITEM "Pause Spotify",               ID_TRAY_SPOTIFY
+        MENUITEM "Pause Spotify",               ID_TRAY_SPOTIFY
+        POPUP "Media Player Classic"
+        BEGIN
+            MENUITEM "Pause",                       ID_MEDIA_PLAYER_CLASSIC_PAUSE
+            MENUITEM "Low Volume",                  ID_MEDIA_PLAYER_CLASSIC_LOW
+        END
+        POPUP "VLC", INACTIVE
+        BEGIN
+            MENUITEM "Pause",                       ID_VLC_PAUSE, INACTIVE
+            MENUITEM "Low Volume",                  ID_VLC_LOW, INACTIVE
+        END
         POPUP "Winamp"
         BEGIN
             MENUITEM "Pause",                       ID_WINAMP_PAUSE

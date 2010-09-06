@@ -8,6 +8,8 @@
 #include "iTunes.h"
 #include "Rhapsody.h"
 #include "Spotify.h"
+#include "MediaPlayerClassic.h"
+#include "VLC.h"
 
 CMediaPlayer::CMediaPlayer(void)
 : m_pMediaPlayer(NULL)
@@ -125,6 +127,16 @@ void CMediaPlayer::SetType(int nType)
         case MEDIA_PLAYER_SPOTIFY:
         {
             m_pMediaPlayer = new CSpotify();
+            break;
+        }
+        case MEDIA_PLAYER_MEDIA_PLAYER_CLASSIC:
+        {
+            m_pMediaPlayer = new CMediaPlayerClassic();
+            break;
+        }
+        case MEDIA_PLAYER_VLC:
+        {
+            m_pMediaPlayer = new CVLC();
             break;
         }
     }
